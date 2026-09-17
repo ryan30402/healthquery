@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local environment and generated data
+.venv/
+data/raw/
+data/processed/
+models/
