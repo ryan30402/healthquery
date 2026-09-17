@@ -1,0 +1,1265 @@
+{
+  "evaluation": "retrieval_dev_v1",
+  "purpose": "Corpus-informed, assistant-authored development queries with partial relevance judgments.",
+  "evaluation_unit": "Returned record ID after URL deduplication; not source URL alone.",
+  "limitation": "Unjudged results may also be relevant. These scores do not establish clinical correctness.",
+  "queries_sha256": "054da423dfe7d57deaec493aaf9429f0c7dd0ff2cb1f90f081cf1133aa59d0ff",
+  "overlap_corpus_sha256": "5e14b1be4193741f8f8bff71c40f4872cb28f6e9b604d2cb7e7dc73b2e585c87",
+  "index_sha256": "2ac8809787db3ce7cd7c2d8d1022ee40a62144c23c2182ede55c0a074bb0b375",
+  "search_code_sha256": "3bca181c92c3021fbaf18a5cbd323ed2aeb72d137d2758622a77e9a0291b3027",
+  "metrics_code_sha256": "d934d19ce31aa77a216df28c77f7ab68816f944364a7262ad9f3684e0fa79675",
+  "evaluator_code_sha256": "6b9b43654f41074284f6791b76db5d5ed1457eff9cdc11c802e797f7c4bd1c3c",
+  "index_metadata": {
+    "index_version": "lexical_v1",
+    "dataset_revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+    "input_sha256": "5e14b1be4193741f8f8bff71c40f4872cb28f6e9b604d2cb7e7dc73b2e585c87",
+    "sklearn_version": "1.8.0",
+    "input_records": 47441,
+    "skipped_empty_question_or_answer": 31034,
+    "skipped_invalid_source_url": 0,
+    "duplicate_records_removed": 30,
+    "indexed_records": 16377,
+    "indexed_question_types": [
+      "causes",
+      "complications",
+      "considerations",
+      "exams and tests",
+      "frequency",
+      "genetic changes",
+      "information",
+      "inheritance",
+      "outlook",
+      "prevention",
+      "research",
+      "stages",
+      "support groups",
+      "susceptibility",
+      "symptoms",
+      "treatment"
+    ],
+    "unique_source_urls": 5476,
+    "vocabulary_size": 23507,
+    "indexed_text": "question + focus",
+    "deduplication": "normalized question + whitespace-normalized answer + source URL",
+    "source_links_checked_online": false
+  },
+  "examples": 24,
+  "medquad_exact_question_overlap": 0,
+  "metrics": {
+    "hit_at_1": 0.3333333333333333,
+    "hit_at_3": 0.5833333333333334,
+    "mrr_at_3": 0.4444444444444444
+  },
+  "per_intent": {
+    "causes": {
+      "hit_at_1": 0.16666666666666666,
+      "hit_at_3": 0.3333333333333333,
+      "mrr_at_3": 0.25
+    },
+    "information": {
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_3": 1,
+      "mrr_at_3": 0.8333333333333334
+    },
+    "symptoms": {
+      "hit_at_1": 0.16666666666666666,
+      "hit_at_3": 0.6666666666666666,
+      "mrr_at_3": 0.3611111111111111
+    },
+    "treatment": {
+      "hit_at_1": 0.3333333333333333,
+      "hit_at_3": 0.3333333333333333,
+      "mrr_at_3": 0.3333333333333333
+    }
+  },
+  "details": [
+    {
+      "id": "retrieval-dev-001",
+      "question": "Can you explain what hypothyroidism means for the body's metabolism?",
+      "topic": "hypothyroidism",
+      "intent": "information",
+      "relevant_record_ids": [
+        "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+        "5_NIDDK_QA/0000009.xml::0000009-1"
+      ],
+      "relevance_note": "Both answers define inadequate thyroid hormone and explain its relationship to metabolism or slowed body functions.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html"
+        },
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html",
+          "lexical_similarity": 0.6512803183940301
+        },
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx",
+          "lexical_similarity": 0.6512803183940301
+        },
+        {
+          "id": "2_GARD_QA/0001521.xml::0001521-1",
+          "question": "What is (are) Congenital hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://rarediseases.info.nih.gov/gard/1487/congenital-hypothyroidism",
+          "lexical_similarity": 0.4328453138099107
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-002",
+      "question": "What changes in energy, weight, and sensitivity to cold can occur with hypothyroidism?",
+      "topic": "hypothyroidism",
+      "intent": "symptoms",
+      "relevant_record_ids": [
+        "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+        "5_NIDDK_QA/0000009.xml::0000009-4"
+      ],
+      "relevance_note": "Both answers list fatigue, weight gain, and cold intolerance among the archived symptoms.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html"
+        },
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-4",
+          "question": "What are the symptoms of Hypothyroidism ?",
+          "question_type": "symptoms",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html",
+          "lexical_similarity": 0.41290384945485925
+        },
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx",
+          "lexical_similarity": 0.41290384945485925
+        },
+        {
+          "id": "3_GHR_QA/0000230.xml::0000230-3",
+          "question": "What are the genetic changes related to congenital hypothyroidism ?",
+          "question_type": "genetic changes",
+          "source_url": "https://ghr.nlm.nih.gov/condition/congenital-hypothyroidism",
+          "lexical_similarity": 0.2821127215944907
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-003",
+      "question": "Which illnesses or medical treatments can lead to hypothyroidism?",
+      "topic": "hypothyroidism",
+      "intent": "causes",
+      "relevant_record_ids": [
+        "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+        "5_NIDDK_QA/0000009.xml::0000009-3"
+      ],
+      "relevance_note": "Both answers identify thyroid disorders and medical interventions such as thyroid removal, radiation, or medicines as possible causes.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html"
+        },
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-3",
+          "question": "What causes Hypothyroidism ?",
+          "question_type": "causes",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html",
+          "lexical_similarity": 0.38111851549245457
+        },
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx",
+          "lexical_similarity": 0.38111851549245457
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000549.xml::0000549-1",
+          "question": "What is (are) Lead Poisoning ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/leadpoisoning.html",
+          "lexical_similarity": 0.32054570374785574
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-004",
+      "question": "How is thyroid hormone replacement monitored when treating hypothyroidism?",
+      "topic": "hypothyroidism",
+      "intent": "treatment",
+      "relevant_record_ids": [
+        "5_NIDDK_QA/0000009.xml::0000009-8"
+      ],
+      "relevance_note": "The answer describes synthetic thyroxine treatment, TSH testing, and dose adjustments based on follow-up blood tests.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "5_NIDDK_QA/0000009.xml::0000009-8",
+          "question": "What are the treatments for Hypothyroidism ?",
+          "question_type": "treatment",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/endocrine/hypothyroidism/Pages/fact-sheet.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000486.xml::0000486-1",
+          "question": "Do you have information about Hormone Replacement Therapy",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hormonereplacementtherapy.html",
+          "lexical_similarity": 0.4817166850322281
+        },
+        {
+          "id": "2_GARD_QA/0006100.xml::0006100-1",
+          "question": "What are the symptoms of Thyroid hormone plasma membrane transport defect ?",
+          "question_type": "symptoms",
+          "source_url": "https://rarediseases.info.nih.gov/gard/8499/thyroid-hormone-plasma-membrane-transport-defect",
+          "lexical_similarity": 0.3363684856247089
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000498.xml::0000498-1",
+          "question": "What is (are) Hypothyroidism ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/hypothyroidism.html",
+          "lexical_similarity": 0.3235750082687942
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-005",
+      "question": "I'd like an introduction to gallstones: what are they and where do they form?",
+      "topic": "gallstones",
+      "intent": "information",
+      "relevant_record_ids": [
+        "4_MPlus_Health_Topics_QA/0000388.xml::0000388-1",
+        "5_NIDDK_QA/0000101.xml::0000101-1"
+      ],
+      "relevance_note": "Both answers describe gallstones as hardened material or particles and locate them in the gallbladder or its bile-flow context.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000388.xml::0000388-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/gallstones.html"
+        },
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000388.xml::0000388-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/gallstones.html",
+          "lexical_similarity": 0.5408545896912151
+        },
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx",
+          "lexical_similarity": 0.5408545896912151
+        },
+        {
+          "id": "2_GARD_QA/0005279.xml::0005279-1",
+          "question": "What is (are) Refsum disease, infantile form ?",
+          "question_type": "information",
+          "source_url": "https://rarediseases.info.nih.gov/gard/4648/refsum-disease-infantile-form",
+          "lexical_similarity": 0.24214904985734031
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-006",
+      "question": "When gallstones cause an attack, how long can the pain last and when does it tend to occur?",
+      "topic": "gallstones",
+      "intent": "symptoms",
+      "relevant_record_ids": [
+        "5_NIDDK_QA/0000101.xml::0000101-5"
+      ],
+      "relevance_note": "The answer explicitly discusses pain duration, heavy meals, and evening or nighttime gallbladder attacks.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-5",
+          "question": "What are the symptoms of Gallstones ?",
+          "question_type": "symptoms",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000388.xml::0000388-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/gallstones.html",
+          "lexical_similarity": 0.3567939686591355
+        },
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx",
+          "lexical_similarity": 0.3567939686591355
+        },
+        {
+          "id": "9_CDC_QA/0000424.xml::0000424-3",
+          "question": "what types of infections does vancomycin-resistant enterococci cause?",
+          "question_type": "information",
+          "source_url": "http://www.cdc.gov/HAI/organisms/vre/vre.html",
+          "lexical_similarity": 0.2892054350009656
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-007",
+      "question": "What changes in bile or gallbladder emptying allow gallstones to develop?",
+      "topic": "gallstones",
+      "intent": "causes",
+      "relevant_record_ids": [
+        "5_NIDDK_QA/0000101.xml::0000101-3"
+      ],
+      "relevance_note": "The answer describes bile-component imbalances and incomplete or infrequent gallbladder emptying.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-3",
+          "question": "What causes Gallstones ?",
+          "question_type": "causes",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000388.xml::0000388-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/gallstones.html",
+          "lexical_similarity": 0.4980484588902233
+        },
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx",
+          "lexical_similarity": 0.4980484588902233
+        },
+        {
+          "id": "1_CancerGov_QA/0000020_1.xml::0000020_1-1",
+          "question": "What is (are) Gallbladder Cancer ?",
+          "question_type": "information",
+          "source_url": "https://www.cancer.gov/types/gallbladder/patient/gallbladder-treatment-pdq",
+          "lexical_similarity": 0.3518753154450509
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-008",
+      "question": "What options are described for gallstones when someone cannot have surgery?",
+      "topic": "gallstones",
+      "intent": "treatment",
+      "relevant_record_ids": [
+        "5_NIDDK_QA/0000101.xml::0000101-8"
+      ],
+      "relevance_note": "The answer discusses nonsurgical treatment for selected cases, including dissolution therapy, ERCP, and shock wave lithotripsy.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-8",
+          "question": "What are the treatments for Gallstones ?",
+          "question_type": "treatment",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000018.xml::0000018-1",
+          "question": "What is (are) After Surgery ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/aftersurgery.html",
+          "lexical_similarity": 0.632467565339826
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000388.xml::0000388-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/gallstones.html",
+          "lexical_similarity": 0.6170515624632602
+        },
+        {
+          "id": "5_NIDDK_QA/0000101.xml::0000101-1",
+          "question": "What is (are) Gallstones ?",
+          "question_type": "information",
+          "source_url": "http://www.niddk.nih.gov/health-information/health-topics/digestive-diseases/gallstones/Pages/facts.aspx",
+          "lexical_similarity": 0.6170515624632602
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-009",
+      "question": "What does insomnia mean, and how do short-term and long-lasting forms differ?",
+      "topic": "insomnia",
+      "intent": "information",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000081.xml::0000081-1"
+      ],
+      "relevance_note": "The answer defines insomnia and distinguishes acute from chronic insomnia in its overview.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "rr_at_3": 0.5
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000518.xml::0000518-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/insomnia.html",
+          "lexical_similarity": 0.3781127222397466
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso",
+          "lexical_similarity": 0.3781127222397466
+        },
+        {
+          "id": "2_GARD_QA/0005603.xml::0005603-1",
+          "question": "What is (are) SHORT syndrome ?",
+          "question_type": "information",
+          "source_url": "https://rarediseases.info.nih.gov/gard/7633/short-syndrome",
+          "lexical_similarity": 0.20151020501448502
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-010",
+      "question": "How might insomnia affect alertness, concentration, and mood during the day?",
+      "topic": "insomnia",
+      "intent": "symptoms",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+        "8_NHLBI_QA_XML/0000081.xml::0000081-4"
+      ],
+      "relevance_note": "Both answers discuss daytime tiredness or sleepiness, difficulty focusing, and anxiety, depression, or irritability.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "rr_at_3": 0.5
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-4",
+          "question": "What are the symptoms of Insomnia ?",
+          "question_type": "symptoms",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000518.xml::0000518-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/insomnia.html",
+          "lexical_similarity": 0.5532371573419504
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso",
+          "lexical_similarity": 0.5532371573419504
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000619.xml::0000619-1",
+          "question": "What is (are) Mood Disorders ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/mooddisorders.html",
+          "lexical_similarity": 0.48397391605086515
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-011",
+      "question": "What examples of prescription medicines and commonly used substances are linked to secondary insomnia?",
+      "topic": "insomnia",
+      "intent": "causes",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000081.xml::0000081-2"
+      ],
+      "relevance_note": "The answer names medicine examples such as theophylline and beta blockers, plus caffeine, nicotine, and alcohol.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-2",
+          "question": "What causes Insomnia ?",
+          "question_type": "causes",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000518.xml::0000518-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/insomnia.html",
+          "lexical_similarity": 0.4078263508651372
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso",
+          "lexical_similarity": 0.4078263508651372
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000592.xml::0000592-1",
+          "question": "Do you have information about Medicines",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/medicines.html",
+          "lexical_similarity": 0.3686978700104887
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-012",
+      "question": "How does cognitive-behavioral therapy help with ongoing insomnia?",
+      "topic": "insomnia",
+      "intent": "treatment",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000081.xml::0000081-6"
+      ],
+      "relevance_note": "The treatment answer explains CBT's work on sleep-related thoughts, habits, anxiety, relaxation, and time spent awake in bed.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-6",
+          "question": "What are the treatments for Insomnia ?",
+          "question_type": "treatment",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000518.xml::0000518-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/insomnia.html",
+          "lexical_similarity": 0.3511509079395138
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000081.xml::0000081-1",
+          "question": "What is (are) Insomnia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/inso",
+          "lexical_similarity": 0.3511509079395138
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000676.xml::0000676-1",
+          "question": "What is (are) Oxygen Therapy ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/oxygentherapy.html",
+          "lexical_similarity": 0.22548710596445337
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-013",
+      "question": "Can you explain what pneumonia does to the air sacs inside the lungs?",
+      "topic": "pneumonia",
+      "intent": "information",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+        "8_NHLBI_QA_XML/0000105.xml::0000105-4"
+      ],
+      "relevance_note": "Both answers explain inflammation of the alveoli and the accumulation of fluid or pus in the air sacs.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "rr_at_3": 0.5
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-4",
+          "question": "What causes Pneumonia ?",
+          "question_type": "causes",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/pneumonia.html",
+          "lexical_similarity": 0.41996039542856717
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu",
+          "lexical_similarity": 0.41996039542856717
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000019.xml::0000019-1",
+          "question": "Do you have information about Air Pollution",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/airpollution.html",
+          "lexical_similarity": 0.322093713634557
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-014",
+      "question": "Besides a cough, what physical signs can accompany pneumonia?",
+      "topic": "pneumonia",
+      "intent": "symptoms",
+      "relevant_record_ids": [
+        "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+        "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+        "8_NHLBI_QA_XML/0000105.xml::0000105-6"
+      ],
+      "relevance_note": "These answers give physical signs beyond coughing, including fever, chills, and difficulty breathing; the detailed symptom answer lists additional signs.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "rr_at_3": 0.3333333333333333
+      },
+      "known_relevant_records": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/pneumonia.html"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-6",
+          "question": "What are the symptoms of Pneumonia ?",
+          "question_type": "symptoms",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000242.xml::0000242-1",
+          "question": "What is (are) Cough ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/cough.html",
+          "lexical_similarity": 0.4224274294307528
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000047.xml::0000047-1",
+          "question": "What is (are) Cough ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/cough",
+          "lexical_similarity": 0.4224274294307528
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/pneumonia.html",
+          "lexical_similarity": 0.37561205639835094
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-015",
+      "question": "Which kinds of germs are responsible for pneumonia, and how do they reach the lungs?",
+      "topic": "pneumonia",
+      "intent": "causes",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000105.xml::0000105-4"
+      ],
+      "relevance_note": "The answer identifies bacteria, viruses, and fungi and explains how germs can bypass the body's protective filtering and coughing mechanisms.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-4",
+          "question": "What causes Pneumonia ?",
+          "question_type": "causes",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/pneumonia.html",
+          "lexical_similarity": 0.528433876612507
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu",
+          "lexical_similarity": 0.528433876612507
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000403.xml::0000403-1",
+          "question": "Do you have information about Germs and Hygiene",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/germsandhygiene.html",
+          "lexical_similarity": 0.4217696160343193
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-016",
+      "question": "How does medicine for bacterial pneumonia differ from medicine for viral pneumonia?",
+      "topic": "pneumonia",
+      "intent": "treatment",
+      "relevant_record_ids": [
+        "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+        "8_NHLBI_QA_XML/0000105.xml::0000105-8"
+      ],
+      "relevance_note": "Both answers distinguish antibiotics for bacterial pneumonia from possible antiviral treatment for viral pneumonia.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/pneumonia.html"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-8",
+          "question": "What are the treatments for Pneumonia ?",
+          "question_type": "treatment",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000723.xml::0000723-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/pneumonia.html",
+          "lexical_similarity": 0.4518740334057838
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000105.xml::0000105-1",
+          "question": "What is (are) Pneumonia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/pnu",
+          "lexical_similarity": 0.4518740334057838
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000463.xml::0000463-1",
+          "question": "Do you have information about Herbal Medicine",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/herbalmedicine.html",
+          "lexical_similarity": 0.3358010543618052
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-017",
+      "question": "What does iron-deficiency anemia mean for red blood cells and their ability to carry oxygen?",
+      "topic": "iron-deficiency anemia",
+      "intent": "information",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000082.xml::0000082-1"
+      ],
+      "relevance_note": "The overview connects inadequate iron with fewer healthy red blood cells, reduced hemoglobin, and hemoglobin's oxygen-carrying role.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-1",
+          "question": "What is (are) Iron-Deficiency Anemia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-1",
+          "question": "What is (are) Iron-Deficiency Anemia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida",
+          "lexical_similarity": 0.5927471990595198
+        },
+        {
+          "id": "3_GHR_QA/0000529.xml::0000529-1",
+          "question": "What is (are) iron-refractory iron deficiency anemia ?",
+          "question_type": "information",
+          "source_url": "https://ghr.nlm.nih.gov/condition/iron-refractory-iron-deficiency-anemia",
+          "lexical_similarity": 0.45318898921082185
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000850.xml::0000850-1",
+          "question": "Do you have information about Stem Cells",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/stemcells.html",
+          "lexical_similarity": 0.22446053900622018
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-018",
+      "question": "Can iron-deficiency anemia involve unusual cravings or changes to the nails and tongue?",
+      "topic": "iron-deficiency anemia",
+      "intent": "symptoms",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000082.xml::0000082-4"
+      ],
+      "relevance_note": "The answer explicitly mentions pica, brittle nails, and swelling or soreness of the tongue.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-4",
+          "question": "What are the symptoms of Iron-Deficiency Anemia ?",
+          "question_type": "symptoms",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-1",
+          "question": "What is (are) Iron-Deficiency Anemia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida",
+          "lexical_similarity": 0.7206866162587106
+        },
+        {
+          "id": "3_GHR_QA/0000529.xml::0000529-1",
+          "question": "What is (are) iron-refractory iron deficiency anemia ?",
+          "question_type": "information",
+          "source_url": "https://ghr.nlm.nih.gov/condition/iron-refractory-iron-deficiency-anemia",
+          "lexical_similarity": 0.5510059595022341
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000525.xml::0000525-1",
+          "question": "Do you have information about Iron",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/iron.html",
+          "lexical_similarity": 0.24281686470484545
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-019",
+      "question": "What digestive problems can prevent iron absorption and contribute to iron-deficiency anemia?",
+      "topic": "iron-deficiency anemia",
+      "intent": "causes",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000082.xml::0000082-2"
+      ],
+      "relevance_note": "The answer discusses impaired absorption after intestinal surgery or with intestinal diseases such as Crohn's disease and celiac disease.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-2",
+          "question": "What causes Iron-Deficiency Anemia ?",
+          "question_type": "causes",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-7",
+          "question": "How to prevent Iron-Deficiency Anemia ?",
+          "question_type": "prevention",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida",
+          "lexical_similarity": 0.8366498791057121
+        },
+        {
+          "id": "3_GHR_QA/0000529.xml::0000529-1",
+          "question": "What is (are) iron-refractory iron deficiency anemia ?",
+          "question_type": "information",
+          "source_url": "https://ghr.nlm.nih.gov/condition/iron-refractory-iron-deficiency-anemia",
+          "lexical_similarity": 0.6185726557648921
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000525.xml::0000525-1",
+          "question": "Do you have information about Iron",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/iron.html",
+          "lexical_similarity": 0.39955688804376455
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-020",
+      "question": "Which options can be used for severe iron-deficiency anemia that needs hospital care?",
+      "topic": "iron-deficiency anemia",
+      "intent": "treatment",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000082.xml::0000082-1",
+        "8_NHLBI_QA_XML/0000082.xml::0000082-6"
+      ],
+      "relevance_note": "Both answers describe severe cases and mention blood transfusion, iron injections, or intravenous iron therapy in a hospital-care context.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-1",
+          "question": "What is (are) Iron-Deficiency Anemia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-6",
+          "question": "What are the treatments for Iron-Deficiency Anemia ?",
+          "question_type": "treatment",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "8_NHLBI_QA_XML/0000082.xml::0000082-1",
+          "question": "What is (are) Iron-Deficiency Anemia ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health-topics/topics/ida",
+          "lexical_similarity": 0.8088248296181396
+        },
+        {
+          "id": "3_GHR_QA/0000529.xml::0000529-1",
+          "question": "What is (are) iron-refractory iron deficiency anemia ?",
+          "question_type": "information",
+          "source_url": "https://ghr.nlm.nih.gov/condition/iron-refractory-iron-deficiency-anemia",
+          "lexical_similarity": 0.6183926428751513
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000525.xml::0000525-1",
+          "question": "Do you have information about Iron",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/iron.html",
+          "lexical_similarity": 0.27251277433575305
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-021",
+      "question": "What happens to the bronchial tubes in bronchitis, and what makes a case acute or chronic?",
+      "topic": "bronchitis",
+      "intent": "information",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000021.xml::0000021-1"
+      ],
+      "relevance_note": "The overview defines inflammation of the bronchial tubes and distinguishes the short-term and ongoing forms.",
+      "scores": {
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "rr_at_3": 1.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi",
+          "lexical_similarity": 0.48011292280100776
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000008.xml::0000008-1",
+          "question": "What is (are) Acute Bronchitis ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/acutebronchitis.html",
+          "lexical_similarity": 0.4645038522820478
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000197.xml::0000197-1",
+          "question": "What is (are) Chronic Bronchitis ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/chronicbronchitis.html",
+          "lexical_similarity": 0.43302740067009526
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-022",
+      "question": "What is the cough like in acute bronchitis, and what other breathing or chest symptoms can occur?",
+      "topic": "bronchitis",
+      "intent": "symptoms",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+        "8_NHLBI_QA_XML/0000021.xml::0000021-5"
+      ],
+      "relevance_note": "Both answers describe a mucus-producing cough and symptoms such as wheezing, chest discomfort, or shortness of breath.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "rr_at_3": 0.3333333333333333
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-5",
+          "question": "What are the symptoms of Bronchitis ?",
+          "question_type": "symptoms",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000008.xml::0000008-1",
+          "question": "What is (are) Acute Bronchitis ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/acutebronchitis.html",
+          "lexical_similarity": 0.5969436072440403
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000242.xml::0000242-1",
+          "question": "What is (are) Cough ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/cough.html",
+          "lexical_similarity": 0.3245278798853722
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi",
+          "lexical_similarity": 0.3245278798853722
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-023",
+      "question": "Why can repeated exposure to smoke, dust, or fumes lead to chronic bronchitis?",
+      "topic": "bronchitis",
+      "intent": "causes",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+        "8_NHLBI_QA_XML/0000021.xml::0000021-3"
+      ],
+      "relevance_note": "Both answers describe persistent irritation or inflammation of the bronchial tubes and identify smoking; the causes answer also addresses repeated dust or fume exposure.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "rr_at_3": 0.5
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi"
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-3",
+          "question": "What causes Bronchitis ?",
+          "question_type": "causes",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000197.xml::0000197-1",
+          "question": "What is (are) Chronic Bronchitis ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/chronicbronchitis.html",
+          "lexical_similarity": 0.6024470100420405
+        },
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi",
+          "lexical_similarity": 0.33613576034550613
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000549.xml::0000549-1",
+          "question": "What is (are) Lead Poisoning ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/leadpoisoning.html",
+          "lexical_similarity": 0.25810537401060096
+        }
+      ]
+    },
+    {
+      "id": "retrieval-dev-024",
+      "question": "What approaches are used to ease breathing and coughing in bronchitis?",
+      "topic": "bronchitis",
+      "intent": "treatment",
+      "relevant_record_ids": [
+        "8_NHLBI_QA_XML/0000021.xml::0000021-7"
+      ],
+      "relevance_note": "The treatment answer discusses symptom relief, inhaled medicines, cough medicines, and reducing exposure to lung irritants.",
+      "scores": {
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "rr_at_3": 0.0
+      },
+      "known_relevant_records": [
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-7",
+          "question": "What are the treatments for Bronchitis ?",
+          "question_type": "treatment",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "8_NHLBI_QA_XML/0000021.xml::0000021-1",
+          "question": "What is (are) Bronchitis ?",
+          "question_type": "information",
+          "source_url": "http://www.nhlbi.nih.gov/health/health-topics/topics/brnchi",
+          "lexical_similarity": 0.5719072166528861
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000132.xml::0000132-1",
+          "question": "What is (are) Breathing Problems ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/breathingproblems.html",
+          "lexical_similarity": 0.4714634043681173
+        },
+        {
+          "id": "4_MPlus_Health_Topics_QA/0000197.xml::0000197-1",
+          "question": "What is (are) Chronic Bronchitis ?",
+          "question_type": "information",
+          "source_url": "https://www.nlm.nih.gov/medlineplus/chronicbronchitis.html",
+          "lexical_similarity": 0.3586256623219718
+        }
+      ]
+    }
+  ]
+}
