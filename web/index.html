@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthQuery · Medical information explorer</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">HEALTHQUERY / RESEARCH DEMO</p>
+      <h1>A starting point for your medical questions.</h1>
+      <p class="intro">Explore related questions and archived information sources in English.</p>
+    </header>
+    <section class="panel" aria-labelledby="search-heading">
+      <h2 id="search-heading">What would you like to explore?</h2>
+      <form id="search-form">
+        <label for="question">Your medical information question</label>
+        <textarea id="question" name="question" rows="3" maxlength="1000" required aria-describedby="question-hint" placeholder="For example: What causes asthma?"></textarea>
+        <p id="question-hint" class="muted">Ask in English. Maximum 1,000 characters.</p>
+        <div class="actions">
+          <button id="submit-button" type="submit">Find related sources <span aria-hidden="true">→</span></button>
+          <button id="example-button" class="example" type="button">Try an asthma question</button>
+        </div>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section id="results-section" hidden aria-labelledby="results-heading">
+      <div class="results-header">
+        <h2 id="results-heading">Related source candidates</h2>
+        <p class="classification">Predicted question type: <strong id="predicted-type"></strong></p>
+      </div>
+      <p class="muted">Classification is an experimental label. Review each source to assess its relevance.</p>
+      <div id="results"></div>
+    </section>
+    <footer>
+      <p id="archive-notice">Excerpts are from archived MedQuAD data; source links have not been checked for current information.</p>
+      <p>Medical information research demo. Not a diagnosis or urgency assessment.</p>
+    </footer>
+  </main>
+</body>
+</html>
