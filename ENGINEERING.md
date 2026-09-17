@@ -16,10 +16,9 @@ They exercise loading, request validation, retrieval behavior, source formatting
 and startup errors without downloading MedQuAD or using your real model files.
 These fixtures are software test data, not a medical evaluation dataset.
 
-The GitHub Actions workflow runs tests under Python 3.13 and then builds the
-container image on pushes, pull requests, and manual runs. A successful image
+The GitHub Actions workflow runs tests under Python 3.13, builds the container image, and uses Chromium to check that container with temporary synthetic artifacts on pushes, pull requests, and manual runs. A successful image
 build checks packaging; it does not prove that your real models load in the
-container. The local run below checks that integration separately.
+container. The local run below checks real-artifact integration separately.
 
 ## Build and run locally
 
@@ -40,7 +39,7 @@ The image contains the application and runtime dependencies. Models are mounted
 read-only at startup rather than copied into the image. The image is therefore
 not self-contained: every deployment must provide compatible model artifacts.
 The container runs as a non-root user and is published only on local loopback.
-The Docker health check calls `/health`; it does not check source links or
+The Docker health check calls `/ready`; it does not check source links or
 retrieval relevance. Plain Docker marks failed checks as unhealthy; it does not
 automatically restart the container because of that status.
 
@@ -49,3 +48,7 @@ Direct ML, numerical, and web dependencies are pinned. Some transitive dependenc
 Run `python -m scripts.finalize` for the complete local training, three-candidate retrieval evaluation, tests, and loopback HTTP benchmark. It stops on a failing command. A passing release check means these commands succeeded, not that retrieval meets a clinical quality threshold or that a public service is running. Restart any running API/container after rebuilding models because they are loaded once at startup.
 
 See [deployment instructions](docs/DEPLOYMENT.md) for a standalone container export containing the evaluated model artifacts, and [results](docs/RESULTS.md) for measured quality and latency. Remote Actions and Docker builds must be checked in their actual environments.
+
+## Product v2
+
+See [OPERATIONS.md](docs/OPERATIONS.md) for request limits, logging/privacy boundaries, model readiness, Docker Compose, browser verification, and concrete launch acceptance work. The default deployment uses one worker and disables proxy-header trust; quotas are process-local and can be shared by users behind a proxy.

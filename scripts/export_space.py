@@ -11,6 +11,7 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 EXPORT_FILES = (
     "api.py",
     "retrieval.py",
+    "service_guard.py",
     "requirements-baseline.txt",
     "requirements-web.txt",
     "web/index.html",
@@ -28,14 +29,14 @@ RUN useradd --create-home --uid 1000 appuser
 WORKDIR /home/appuser/app
 COPY --chown=appuser requirements-baseline.txt requirements-web.txt ./
 RUN python -m pip install --no-cache-dir -r requirements-web.txt
-COPY --chown=appuser api.py retrieval.py DATA_SOURCES.md ./
+COPY --chown=appuser api.py retrieval.py service_guard.py DATA_SOURCES.md ./
 COPY --chown=appuser web/ ./web/
 COPY --chown=appuser models/ ./models/
 COPY --chown=appuser data/medquad_revision.txt ./data/medquad_revision.txt
 USER appuser
 EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2).close()"]
-CMD ["python", "-m", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready', timeout=2).close()"]
+CMD ["python", "-m", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--no-access-log", "--no-proxy-headers"]
 """
 SPACE_README = """---
 title: HealthQuery

@@ -67,4 +67,6 @@ In the live app, check a regular English question, blank input, and the source l
 
 Add the actual working Space URL to the GitHub repository's About website field and README. Until these live checks pass, use the GitHub repository and a local demo recording as your portfolio links. Do not invent a deployment URL or uptime claim.
 
-The service is a research demo with no authentication, per-user rate limiting, or clinical validation. Use public example questions for demonstrations. Cloud latency, availability, and behavior under concurrent load remain unmeasured until you evaluate the deployed service.
+The service has bounded process-local peer rate limiting and active-query admission controls, but no authentication, coordinated per-user quotas, or clinical validation. Behind a hosting proxy, users may share the same peer quota; see OPERATIONS.md before a multi-user rollout. Use public example questions for demonstrations. Cloud latency, availability, and behavior under concurrent load remain unmeasured until you evaluate the deployed service.
+
+For the v2 upgrade, create a fresh export using `python -m scripts.export_space --output ../healthquery-space-v2`, and use that new directory in build/upload commands. The exporter includes service_guard.py and launches one worker with separate Uvicorn access logging and proxy-header trust disabled.

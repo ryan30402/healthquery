@@ -6,9 +6,9 @@ COPY requirements-baseline.txt requirements-web.txt ./
 RUN python -m pip install --no-cache-dir -r requirements-web.txt
 RUN useradd --create-home --uid 10001 appuser
 RUN mkdir /app/models
-COPY api.py retrieval.py ./
+COPY api.py retrieval.py service_guard.py ./
 COPY web/ ./web/
 USER appuser
 EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2).close()"]
-CMD ["python", "-m", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready', timeout=2).close()"]
+CMD ["python", "-m", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--no-access-log", "--no-proxy-headers"]

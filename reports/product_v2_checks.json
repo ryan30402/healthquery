@@ -1,0 +1,42 @@
+{
+  "release": "2.0.0",
+  "python_tests_passed": 92,
+  "python_test_warnings": 1,
+  "browser_checks_passed_real_corpus": 12,
+  "browser_checks_passed_synthetic_corpus": 12,
+  "browser": "Chromium 153.0.8010.0",
+  "browser_driver": "Playwright 1.62.1",
+  "browser_rendering_observed": true,
+  "browser_error_scenarios": "Mocked network failures/status responses supplement actual search and reader requests.",
+  "desktop_viewport": [
+    1440,
+    1000
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "actual_corpus_records": 16377,
+  "export_manifest_hashes_verified": 15,
+  "exported_runtime_api_verified": true,
+  "latency_report": "product_v2_latency.json",
+  "docker_engine_available_here": false,
+  "docker_build_verified_here": false,
+  "remote_ci_verified": false,
+  "public_deployment_verified": false,
+  "retrieval_algorithm_changed": false,
+  "clinical_validation": false,
+  "production_capacity_measured": false,
+  "sha256": {
+    "api.py": "adc6d07971a3de860b4165e72630ffaf5e9bca17b7c22fc5edacf5b95c0176ac",
+    "service_guard.py": "78d8018b21161514877df15a74071a3fb4655566a069a4b2f46448e2faf33b61",
+    "retrieval.py": "3ac2eda342e549d89e511fe5505f915fc66552ac4d859bec7be2f1f1d34b9daa",
+    "web/index.html": "f3a8e484856d4e22155b7dc1e8a99522c7446efb9e673f2f13b2afa05967a863",
+    "web/style.css": "99ddc2d843ca1b46d4ba092244e1b6f8cd99b6ee4f6dd244a2fc6849c8c5ab09",
+    "web/app.js": "3f406528f5386d79e715b9bb99e154b8e6d9871d61fc00bb98fb9b61f037b5bc",
+    "scripts/benchmark.py": "6abe36c60ba3f2246c0407d7525edd26ce38a1adc77988efe47eb83394fc08bc",
+    "scripts/browser_smoke.mjs": "473b483b6cd4da413395016e750d3d9dd84446de6c50c777f6d6a77c50187364",
+    "Dockerfile": "599d44d1d19a022eab1faa0169bb647310e863d75137450e0490befbd9ad4320",
+    "compose.yaml": "badbab823d5600bb522e5643b623908745d94d5aa7e7e377adef70bb6be10bb8"
+  }
+}

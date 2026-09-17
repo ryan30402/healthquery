@@ -27,3 +27,11 @@ After the public Space runs and you verify it, you may add: "Deployed a containe
 5. Show the tests, local latency report, Docker configuration, and actual CI run if it has completed.
 
 A short screen recording and a reproducible repository are useful even without a hosted app. Record public example questions only. Explain code and decisions in your own words and credit MedQuAD as the dataset source.
+
+## Optional v2 engineering bullet
+
+After installing and verifying v2, you can add:
+
+- Developed a responsive search workspace with archived-source reading and citation export; implemented bounded request admission, process-local rate limits, privacy-conscious structured logging, and automated Chromium workflow checks.
+
+Describe the operational controls precisely. Do not turn this into a claim of clinical validation, a successful production launch, or measured multi-user capacity.

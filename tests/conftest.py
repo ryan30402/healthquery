@@ -34,6 +34,7 @@ def tiny_index():
 
 @pytest.fixture
 def artifacts(tmp_path, monkeypatch, tiny_index):
+    api.app.middleware_stack = None
     model_path = tmp_path / "classifier.joblib"
     index_path = tmp_path / "index.joblib"
     classifier = make_pipeline(TfidfVectorizer(), DummyClassifier(strategy="most_frequent"))

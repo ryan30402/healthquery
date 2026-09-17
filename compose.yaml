@@ -1,0 +1,29 @@
+services:
+  healthquery:
+    build: .
+    image: healthquery:2.0.0
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - "./models:/app/models:ro"
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    init: true
+    cpus: 2.0
+    mem_limit: 1g
+    environment:
+      HEALTHQUERY_BODY_LIMIT_BYTES: "8192"
+      HEALTHQUERY_RATE_LIMIT: "60"
+      HEALTHQUERY_RATE_WINDOW_SECONDS: "60"
+      HEALTHQUERY_MAX_INFLIGHT: "4"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -21,3 +21,20 @@ jobs:
         run: python -m pytest -q
       - name: Build container image
         run: docker build --tag healthquery:ci .
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install browser test tools
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Prepare isolated browser fixtures
+        run: python -m scripts.browser_fixture /tmp/healthquery-browser-models
+      - name: Verify browser and container with synthetic artifacts
+        run: |
+          docker run -d --name healthquery-ci -p 127.0.0.1:8000:8000 --mount type=bind,source=/tmp/healthquery-browser-models,target=/app/models,readonly healthquery:ci
+          npm run test:browser
+      - name: Container logs
+        if: always()
+        run: docker logs healthquery-ci || true

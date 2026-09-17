@@ -1,0 +1,27 @@
+{
+  "base_url": "http://127.0.0.1:8765",
+  "checks": [
+    "Collection statistics come from the running API",
+    "English page, input labels, live status, and keyboard skip link",
+    "Whitespace-only questions are rejected before search",
+    "Real API query renders source cards and working archived text",
+    "Mobile layout has no horizontal overflow and controls remain usable",
+    "Denied clipboard access provides a selectable citation",
+    "Recent questions can be reused and cleared",
+    "Empty results have an explicit recovery message",
+    "Server text is rendered as text instead of executable markup",
+    "Rate-limit feedback explains when to retry",
+    "An in-flight request can be cancelled",
+    "A stalled request times out and restores the form"
+  ],
+  "screenshots": [
+    "desktop-welcome.png",
+    "desktop-archive.png",
+    "desktop-results.png",
+    "mobile-results.png"
+  ],
+  "passed": true,
+  "browser_version": "153.0.8010.0",
+  "dataset_revision": "synthetic-browser-fixture",
+  "indexed_records": 4
+}

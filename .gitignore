@@ -19,3 +19,6 @@ models/
 # Local generated deployment folders and runtime logs
 healthquery-space/
 *.log
+# Browser verification dependencies and generated artifacts
+node_modules/
+artifacts/

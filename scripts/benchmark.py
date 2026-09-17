@@ -36,7 +36,7 @@ def main():
     if not rows or any(not isinstance(row.get("question"), str) or not row["question"].strip() for row in rows):
         parser.error("The query file must contain nonempty string questions.")
     artifacts = {name: fingerprint(BASE_DIR / name) for name in (
-        "models/question_classifier.joblib", "models/retrieval_index.joblib", "api.py", "retrieval.py",
+        "models/question_classifier.joblib", "models/retrieval_index.joblib", "api.py", "retrieval.py", "service_guard.py",
     )}
     with socket.socket() as reservation:
         reservation.bind(("127.0.0.1", 0))
@@ -44,10 +44,12 @@ def main():
     base_url = f"http://127.0.0.1:{port}"
     opener = build_opener(ProxyHandler({}))
     latencies = []
+    benchmark_rate = max(1000, args.warmup + len(rows) * args.repeats + 10)
+    server_environment = {**os.environ, "HEALTHQUERY_RATE_LIMIT": str(benchmark_rate), "HEALTHQUERY_MODEL_DIR": str(BASE_DIR / "models")}
     with tempfile.TemporaryFile(mode="w+t") as server_log:
         process = subprocess.Popen(
-            [sys.executable, "-m", "uvicorn", "api:app", "--host", "127.0.0.1", "--port", str(port), "--no-access-log"],
-            cwd=BASE_DIR, stdout=server_log, stderr=subprocess.STDOUT,
+            [sys.executable, "-m", "uvicorn", "api:app", "--host", "127.0.0.1", "--port", str(port), "--no-access-log", "--no-proxy-headers"],
+            cwd=BASE_DIR, stdout=server_log, stderr=subprocess.STDOUT, env=server_environment,
         )
         try:
             deadline = time.monotonic() + 30
@@ -94,6 +96,8 @@ def main():
         "includes": "Client JSON encoding/decoding, local HTTP, validation, classification, retrieval, server JSON serialization.",
         "excludes": "Server startup, model loading, warmup, browser rendering, remote network, concurrent load.",
         "limitation": "Local development benchmark; not a production capacity test or a latency guarantee.",
+        "benchmark_rate_limit_override": benchmark_rate,
+        "rate_limit_note": "Only the benchmark subprocess raises its rate limit to avoid measuring intentional throttling.",
         "percentile_method": "p50 median; p95 linear interpolation (inclusive).",
         "samples": len(latencies), "unique_queries": len({row["question"] for row in rows}),
         "repeats": args.repeats, "warmup_requests": args.warmup, "indexed_records": health["indexed_records"],
