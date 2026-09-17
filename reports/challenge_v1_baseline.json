@@ -1,0 +1,459 @@
+{
+  "evaluation": "challenge_v1",
+  "purpose": "AI-authored development challenge; not a final test or clinical validation.",
+  "challenge_sha256": "6a9bbfb7a21e8c922a31725c957cf60ad030d2ed10a67ed0dd3e3b4ec2a15548",
+  "model_sha256": "d5ab26c0c015de7fd25a792df4d060a66c9bbb5cd1bbdd4bcdf4fc7c58be7b40",
+  "examples": 32,
+  "label_counts": {
+    "information": 4,
+    "symptoms": 4,
+    "causes": 4,
+    "treatment": 4,
+    "prevention": 4,
+    "exams and tests": 4,
+    "outlook": 4,
+    "inheritance": 4
+  },
+  "model_class_count": 39,
+  "medquad_exact_question_overlap": 0,
+  "accuracy": 0.34375,
+  "macro_f1_over_challenge_labels": 0.3009920634920635,
+  "per_class": {
+    "causes": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 4.0
+    },
+    "exams and tests": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1-score": 0.5,
+      "support": 4.0
+    },
+    "information": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 4.0
+    },
+    "inheritance": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 4.0
+    },
+    "outlook": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 4.0
+    },
+    "prevention": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.8888888888888888,
+      "support": 4.0
+    },
+    "symptoms": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1-score": 0.4,
+      "support": 4.0
+    },
+    "treatment": {
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1-score": 0.2857142857142857,
+      "support": 4.0
+    },
+    "accuracy": 0.34375,
+    "macro avg": {
+      "precision": 0.27708333333333335,
+      "recall": 0.34375,
+      "f1-score": 0.3009920634920635,
+      "support": 32.0
+    },
+    "weighted avg": {
+      "precision": 0.27708333333333335,
+      "recall": 0.34375,
+      "f1-score": 0.3009920634920635,
+      "support": 32.0
+    }
+  },
+  "errors": [
+    {
+      "id": "challenge-v1-information-01",
+      "question": "I'd like a plain-language overview of asthma.",
+      "question_type": "information",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-information-02",
+      "question": "Explain what the term osteoporosis means.",
+      "question_type": "information",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-information-03",
+      "question": "Help me understand the condition called eczema.",
+      "question_type": "information",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-information-04",
+      "question": "Give me an introduction to type 2 diabetes.",
+      "question_type": "information",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-symptoms-01",
+      "question": "Which physical changes might someone notice when they have anemia?",
+      "question_type": "symptoms",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-symptoms-02",
+      "question": "Describe the warning signs associated with appendicitis.",
+      "question_type": "symptoms",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-01",
+      "question": "Explain why kidney stones develop.",
+      "question_type": "causes",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-02",
+      "question": "I'm interested in the factors that cause iron-deficiency anemia.",
+      "question_type": "causes",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-03",
+      "question": "Describe the process that leads to a urinary tract infection.",
+      "question_type": "causes",
+      "predicted_type": "prevention",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-04",
+      "question": "Help me understand what brings on contact dermatitis.",
+      "question_type": "causes",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-treatment-02",
+      "question": "I'm looking for ways doctors manage high blood pressure.",
+      "question_type": "treatment",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-treatment-03",
+      "question": "Explain the usual approaches to treating seasonal allergies.",
+      "question_type": "treatment",
+      "predicted_type": "exams and tests",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-treatment-04",
+      "question": "Tell me about therapies used for rheumatoid arthritis.",
+      "question_type": "treatment",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-exams-01",
+      "question": "Which tests are used to confirm a diagnosis of celiac disease?",
+      "question_type": "exams and tests",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-exams-04",
+      "question": "Explain the testing process for suspected strep throat.",
+      "question_type": "exams and tests",
+      "predicted_type": "treatment",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-01",
+      "question": "Describe the expected long-term course of multiple sclerosis.",
+      "question_type": "outlook",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-02",
+      "question": "I'm interested in the chances of recovery from Bell's palsy.",
+      "question_type": "outlook",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-03",
+      "question": "Explain how Parkinson's disease usually progresses over time.",
+      "question_type": "outlook",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-04",
+      "question": "Tell me about the typical prognosis for someone diagnosed with Hodgkin lymphoma.",
+      "question_type": "outlook",
+      "predicted_type": "treatment",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-inheritance-02",
+      "question": "Describe the inheritance pattern of Huntington's disease.",
+      "question_type": "inheritance",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-inheritance-03",
+      "question": "I'm interested in how sickle cell disease runs in families.",
+      "question_type": "inheritance",
+      "predicted_type": "exams and tests",
+      "correct": false
+    }
+  ],
+  "predictions": [
+    {
+      "id": "challenge-v1-information-01",
+      "question": "I'd like a plain-language overview of asthma.",
+      "question_type": "information",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-information-02",
+      "question": "Explain what the term osteoporosis means.",
+      "question_type": "information",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-information-03",
+      "question": "Help me understand the condition called eczema.",
+      "question_type": "information",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-information-04",
+      "question": "Give me an introduction to type 2 diabetes.",
+      "question_type": "information",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-symptoms-01",
+      "question": "Which physical changes might someone notice when they have anemia?",
+      "question_type": "symptoms",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-symptoms-02",
+      "question": "Describe the warning signs associated with appendicitis.",
+      "question_type": "symptoms",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-symptoms-03",
+      "question": "I'm trying to recognize the typical signs of a migraine.",
+      "question_type": "symptoms",
+      "predicted_type": "symptoms",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-symptoms-04",
+      "question": "List the symptoms people commonly report with hypothyroidism.",
+      "question_type": "symptoms",
+      "predicted_type": "symptoms",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-causes-01",
+      "question": "Explain why kidney stones develop.",
+      "question_type": "causes",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-02",
+      "question": "I'm interested in the factors that cause iron-deficiency anemia.",
+      "question_type": "causes",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-03",
+      "question": "Describe the process that leads to a urinary tract infection.",
+      "question_type": "causes",
+      "predicted_type": "prevention",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-causes-04",
+      "question": "Help me understand what brings on contact dermatitis.",
+      "question_type": "causes",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-treatment-01",
+      "question": "Describe the available treatment options for psoriasis.",
+      "question_type": "treatment",
+      "predicted_type": "treatment",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-treatment-02",
+      "question": "I'm looking for ways doctors manage high blood pressure.",
+      "question_type": "treatment",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-treatment-03",
+      "question": "Explain the usual approaches to treating seasonal allergies.",
+      "question_type": "treatment",
+      "predicted_type": "exams and tests",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-treatment-04",
+      "question": "Tell me about therapies used for rheumatoid arthritis.",
+      "question_type": "treatment",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-prevention-01",
+      "question": "Explain how the risk of developing type 2 diabetes can be reduced.",
+      "question_type": "prevention",
+      "predicted_type": "prevention",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-prevention-02",
+      "question": "I'm interested in ways to prevent sunburn.",
+      "question_type": "prevention",
+      "predicted_type": "prevention",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-prevention-03",
+      "question": "Describe measures used to prevent influenza.",
+      "question_type": "prevention",
+      "predicted_type": "prevention",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-prevention-04",
+      "question": "Tell me how people can lower their chances of getting kidney stones.",
+      "question_type": "prevention",
+      "predicted_type": "prevention",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-exams-01",
+      "question": "Which tests are used to confirm a diagnosis of celiac disease?",
+      "question_type": "exams and tests",
+      "predicted_type": "information",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-exams-02",
+      "question": "Describe how doctors check someone for sleep apnea.",
+      "question_type": "exams and tests",
+      "predicted_type": "exams and tests",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-exams-03",
+      "question": "I'm interested in the examinations used to diagnose glaucoma.",
+      "question_type": "exams and tests",
+      "predicted_type": "exams and tests",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-exams-04",
+      "question": "Explain the testing process for suspected strep throat.",
+      "question_type": "exams and tests",
+      "predicted_type": "treatment",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-01",
+      "question": "Describe the expected long-term course of multiple sclerosis.",
+      "question_type": "outlook",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-02",
+      "question": "I'm interested in the chances of recovery from Bell's palsy.",
+      "question_type": "outlook",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-03",
+      "question": "Explain how Parkinson's disease usually progresses over time.",
+      "question_type": "outlook",
+      "predicted_type": "inheritance",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-outlook-04",
+      "question": "Tell me about the typical prognosis for someone diagnosed with Hodgkin lymphoma.",
+      "question_type": "outlook",
+      "predicted_type": "treatment",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-inheritance-01",
+      "question": "Explain whether cystic fibrosis can be passed from parents to children.",
+      "question_type": "inheritance",
+      "predicted_type": "inheritance",
+      "correct": true
+    },
+    {
+      "id": "challenge-v1-inheritance-02",
+      "question": "Describe the inheritance pattern of Huntington's disease.",
+      "question_type": "inheritance",
+      "predicted_type": "symptoms",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-inheritance-03",
+      "question": "I'm interested in how sickle cell disease runs in families.",
+      "question_type": "inheritance",
+      "predicted_type": "exams and tests",
+      "correct": false
+    },
+    {
+      "id": "challenge-v1-inheritance-04",
+      "question": "Tell me whether hemophilia can be inherited.",
+      "question_type": "inheritance",
+      "predicted_type": "inheritance",
+      "correct": true
+    }
+  ]
+}
