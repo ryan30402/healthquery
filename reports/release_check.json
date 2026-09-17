@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-09-17T04:37:50.282362+00:00",
+  "python_version": "3.13.0",
+  "checks": [
+    "classifier_training",
+    "classification_challenge",
+    "three_retrieval_candidates",
+    "pytest",
+    "loopback_http_benchmark"
+  ],
+  "selected_index": "dual",
+  "docker_build_verified_by_this_script": false,
+  "remote_ci_verified_by_this_script": false,
+  "public_deployment_verified_by_this_script": false
+}

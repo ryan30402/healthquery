@@ -1,0 +1,566 @@
+{
+  "dataset_revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+  "python_version": "3.12.14",
+  "sklearn_version": "1.8.0",
+  "seed": 42,
+  "raw_records": 47441,
+  "unique_questions": 43449,
+  "duplicates_removed": 3992,
+  "classes": [
+    "brand names",
+    "brand names of combination products",
+    "causes",
+    "complications",
+    "considerations",
+    "contraindication",
+    "dietary",
+    "dose",
+    "emergency or overdose",
+    "exams and tests",
+    "forget a dose",
+    "frequency",
+    "genetic changes",
+    "how can i learn more",
+    "how does it work",
+    "how effective is it",
+    "important warning",
+    "indication",
+    "information",
+    "inheritance",
+    "interactions with foods",
+    "interactions with herbs and supplements",
+    "interactions with medications",
+    "other information",
+    "outlook",
+    "precautions",
+    "prevention",
+    "research",
+    "severe reaction",
+    "side effects",
+    "stages",
+    "storage and disposal",
+    "support groups",
+    "susceptibility",
+    "symptoms",
+    "treatment",
+    "usage",
+    "when to contact a medical professional",
+    "why get vaccinated"
+  ],
+  "split_sizes": {
+    "train": 34758,
+    "validation": 4347,
+    "test": 4344
+  },
+  "split_policy": "Connected file/focus/URL groups; stratified 5-fold holdout, then stratified 2-fold validation/test.",
+  "evaluation_split": "validation",
+  "test_evaluated": false,
+  "results": {
+    "majority": {
+      "accuracy": 0.17138256268691052,
+      "macro_f1": 0.007502970975084094,
+      "per_class": {
+        "brand names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 124.0
+        },
+        "brand names of combination products": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 22.0
+        },
+        "causes": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 221.0
+        },
+        "complications": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 110.0
+        },
+        "considerations": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 50.0
+        },
+        "contraindication": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "dietary": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 108.0
+        },
+        "dose": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "emergency or overdose": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 114.0
+        },
+        "exams and tests": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 189.0
+        },
+        "forget a dose": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 111.0
+        },
+        "frequency": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 112.0
+        },
+        "genetic changes": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 109.0
+        },
+        "how can i learn more": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "how does it work": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "how effective is it": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "important warning": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 48.0
+        },
+        "indication": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 127.0
+        },
+        "information": {
+          "precision": 0.17138256268691052,
+          "recall": 1.0,
+          "f1-score": 0.29261586802827966,
+          "support": 745.0
+        },
+        "inheritance": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 130.0
+        },
+        "interactions with foods": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "interactions with herbs and supplements": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "interactions with medications": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "other information": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 128.0
+        },
+        "outlook": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 203.0
+        },
+        "precautions": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 138.0
+        },
+        "prevention": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 118.0
+        },
+        "research": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 37.0
+        },
+        "severe reaction": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "side effects": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 130.0
+        },
+        "stages": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 8.0
+        },
+        "storage and disposal": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 109.0
+        },
+        "support groups": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 22.0
+        },
+        "susceptibility": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 39.0
+        },
+        "symptoms": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 404.0
+        },
+        "treatment": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 322.0
+        },
+        "usage": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 125.0
+        },
+        "when to contact a medical professional": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 174.0
+        },
+        "why get vaccinated": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "accuracy": 0.17138256268691052,
+        "macro avg": {
+          "precision": 0.004394424684279757,
+          "recall": 0.02564102564102564,
+          "f1-score": 0.007502970975084094,
+          "support": 4347.0
+        },
+        "weighted avg": {
+          "precision": 0.02937198279313281,
+          "recall": 0.17138256268691052,
+          "f1-score": 0.05014925734554137,
+          "support": 4347.0
+        }
+      }
+    },
+    "tfidf_logreg": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "brand names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 124.0
+        },
+        "brand names of combination products": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 22.0
+        },
+        "causes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 221.0
+        },
+        "complications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 110.0
+        },
+        "considerations": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 50.0
+        },
+        "contraindication": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "dietary": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 108.0
+        },
+        "dose": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "emergency or overdose": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 114.0
+        },
+        "exams and tests": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 189.0
+        },
+        "forget a dose": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 111.0
+        },
+        "frequency": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 112.0
+        },
+        "genetic changes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 109.0
+        },
+        "how can i learn more": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "how does it work": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "how effective is it": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "important warning": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 48.0
+        },
+        "indication": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 127.0
+        },
+        "information": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 745.0
+        },
+        "inheritance": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 130.0
+        },
+        "interactions with foods": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "interactions with herbs and supplements": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "interactions with medications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "other information": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 128.0
+        },
+        "outlook": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 203.0
+        },
+        "precautions": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 138.0
+        },
+        "prevention": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 118.0
+        },
+        "research": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "severe reaction": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "side effects": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 130.0
+        },
+        "stages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "storage and disposal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 109.0
+        },
+        "support groups": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 22.0
+        },
+        "susceptibility": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 39.0
+        },
+        "symptoms": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 404.0
+        },
+        "treatment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 322.0
+        },
+        "usage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 125.0
+        },
+        "when to contact a medical professional": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 174.0
+        },
+        "why get vaccinated": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4347.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4347.0
+        }
+      }
+    }
+  }
+}

@@ -54,7 +54,7 @@ def main():
     parser = argparse.ArgumentParser(description="Evaluate known relevant records in the top three sources.")
     parser.add_argument("--queries", type=Path, default=BASE_DIR / "evaluation/retrieval_dev_v1.jsonl")
     parser.add_argument("--index", type=Path, default=BASE_DIR / "models/retrieval_index.joblib")
-    parser.add_argument("--output", type=Path, default=BASE_DIR / "reports/retrieval_dev_v1_baseline.json")
+    parser.add_argument("--output", type=Path, default=BASE_DIR / "reports/retrieval_dev_v1_dual.json")
     args = parser.parse_args()
     examples = read_jsonl(args.queries)
     corpus_path = BASE_DIR / "data/processed/questions.jsonl"

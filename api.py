@@ -51,7 +51,7 @@ async def lifespan(app: FastAPI):
     del app.state.index
 
 
-app = FastAPI(title="HealthQuery", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="HealthQuery", version="1.0.0", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
 
 

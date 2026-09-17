@@ -1,13 +1,16 @@
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import linear_kernel
 
 
 def search(index, question, top_k=3):
     if top_k < 1:
         raise ValueError("top_k must be at least 1.")
     query_vector = index["vectorizer"].transform([question.strip()])
-    if query_vector.nnz == 0:
-        return []
-    scores = cosine_similarity(query_vector, index["matrix"]).ravel()
+    # Stored and query TF-IDF vectors have L2 norm, so dot product equals cosine.
+    scores = linear_kernel(query_vector, index["matrix"]).ravel()
+    if "answer_vectorizer" in index:
+        answer_query = index["answer_vectorizer"].transform([question.strip()])
+        answer_scores = linear_kernel(answer_query, index["answer_matrix"]).ravel()
+        scores = 0.5 * scores + 0.5 * answer_scores
     order = (-scores).argsort(kind="stable")
     results = []
     seen_urls = set()

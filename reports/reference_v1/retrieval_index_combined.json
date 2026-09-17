@@ -1,6 +1,6 @@
 {
-  "index_version": "lexical_v2_dual",
-  "mode": "dual",
+  "index_version": "lexical_v2_combined",
+  "mode": "combined",
   "sklearn_version": "1.8.0",
   "input_records": 47441,
   "skipped_empty_question_or_answer": 31034,
@@ -26,9 +26,9 @@
     "treatment"
   ],
   "unique_source_urls": 5476,
-  "vocabulary_size": 23507,
-  "answer_vocabulary_size": 510317,
-  "scoring": "0.5 * question_focus_cosine + 0.5 * answer_cosine",
+  "vocabulary_size": 521448,
+  "answer_vocabulary_size": 0,
+  "scoring": "single_field_cosine",
   "vector_norm": "l2",
   "deduplication": "normalized question + whitespace-normalized answer + source URL",
   "source_links_checked_online": false,

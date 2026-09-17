@@ -44,7 +44,8 @@ The Docker health check calls `/health`; it does not check source links or
 retrieval relevance. Plain Docker marks failed checks as unhealthy; it does not
 automatically restart the container because of that status.
 
-The image tag and transitive dependencies are not fully locked. This setup is a
-development baseline; it does not promise byte-identical builds. Model quality,
-retrieval evaluation, source freshness, performance measurements, and hosted
-deployment remain separate work.
+Direct ML, numerical, and web dependencies are pinned. Some transitive dependencies and the base-image tag can change; builds are not promised to be byte-identical. Rebuild artifacts after changing the numerical environment. The pinned NumPy version avoids the NumPy 2.5/joblib shape-deprecation warnings seen during development; the third-party Starlette/AnyIO deprecation warning can still appear.
+
+Run `python -m scripts.finalize` for the complete local training, three-candidate retrieval evaluation, tests, and loopback HTTP benchmark. It stops on a failing command. A passing release check means these commands succeeded, not that retrieval meets a clinical quality threshold or that a public service is running. Restart any running API/container after rebuilding models because they are loaded once at startup.
+
+See [deployment instructions](docs/DEPLOYMENT.md) for a standalone container export containing the evaluated model artifacts, and [results](docs/RESULTS.md) for measured quality and latency. Remote Actions and Docker builds must be checked in their actual environments.

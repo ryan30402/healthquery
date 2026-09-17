@@ -2,7 +2,7 @@
   "evaluation": "challenge_v1",
   "purpose": "AI-authored development challenge; not a final test or clinical validation.",
   "challenge_sha256": "6a9bbfb7a21e8c922a31725c957cf60ad030d2ed10a67ed0dd3e3b4ec2a15548",
-  "model_sha256": "c5bba02b13af865b41a739830da59d1b8990def1fabe1249ca012fae3775c86f",
+  "model_sha256": "bff57dcdf5494d3e00a06161bc4fc2cfade927b545d9d96244a2207b69b4c2fe",
   "examples": 32,
   "label_counts": {
     "information": 4,

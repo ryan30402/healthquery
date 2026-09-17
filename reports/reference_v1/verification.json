@@ -1,0 +1,11 @@
+{
+  "automated_tests_passed": 54,
+  "warnings": 1,
+  "warning": "Third-party Starlette/AnyIO deprecated BlockingPortal alias",
+  "clean_virtual_environment": true,
+  "python": "3.12.14",
+  "processed_corpus_byte_identical_to_previous": true,
+  "final_docker_build_run_in_authoring_environment": false,
+  "remote_ci_run_observed": false,
+  "public_deployment_observed": false
+}
