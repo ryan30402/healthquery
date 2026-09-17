@@ -1,0 +1,7 @@
+*
+!requirements-baseline.txt
+!requirements-web.txt
+!api.py
+!retrieval.py
+!web/
+!web/**

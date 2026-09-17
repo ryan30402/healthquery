@@ -1,0 +1,4 @@
+-r requirements-web.txt
+starlette==1.6.0
+pytest==9.1.1
+httpx2==2.13.0
